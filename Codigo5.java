@@ -1,4 +1,7 @@
-public class Codigo5 {
+public class Codigo5 
+
+import java.util.Scanner;
+{
 	public static void main(String args[]){//el metodo public
 	    Scanner s = new Scanner(System.in); // faltaba el system in dentro del parentesis
 	    System.out.print("Introduzca un número:" ); // va " en lugar de ' dentro de los aprentesis
@@ -39,35 +42,3 @@ public class Codigo5 {
 
 
 
-
-import java.util.Scanner;
-
-public class Codigo5 {
-
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        System.out.print("Introduzca un número: ");
-        String ni = s.nextLine();
-        int c = Integer.parseInt(ni);
-
-        int afo = 0;
-        int noAfo = 0;
-
-        while (Integer.parseInt(ni) > 0) {
-            int digito = Integer.parseInt(ni) % 10;
-            if ((digito == 3) || (digito == 7) || (digito == 8) || (digito == 9)) {
-                afo++;
-            } else {
-                noAfo++;
-            }
-            ni = Integer.toString(Integer.parseInt(ni) / 10);
-        }
-
-        if (afo > noAfo) {
-            System.out.println("El " + c + " es un número afortunado.");
-        } else {
-            System.out.println("El " + c + " no es un número afortunado.");
-        }
-    }
-
-}
